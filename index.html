@@ -6,50 +6,113 @@
     <title>Venda de Tênis</title>
 </head>
 
-<body>
-    <!-- TOPO / HERO -->
-    <section>
 
-    <h1>O mundo anda em linha, nós quebramos</h1>
-    <img src="hero.webp" alt="Tenis">
-    <p>estilo e entrega rápida para todo o Brasil.</p>
-    <button>Comprar Agora</button>
+<header>
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+        <div class="top-links">
+            <a href="#">Acessibilidade</a>
+            <a href="#">Guia de produtos</a>
+            <a href="#">Acompanhe seu pedido</a>
+            <a href="#">Ajuda</a>
+            <a href="#">Entrar</a>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+
+        <!-- Logo -->
+        <div class="logo">
+            <h2>circuit13</h2>
+        </div>
+
+        <!-- Menu principal -->
+        <nav class="menu">
+            <a href="#">Ofertas</a>
+            <a href="#">Lançamentos</a>
+            <a href="#">Masculino</a>
+            <a href="#">Feminino</a>
+            <a href="#">Infantil</a>
+            <a href="#">SNKRS</a>
+        </nav>
+
+        <!-- Ícones -->
+        <div class="icons">
+            🔍
+            ❤️
+            🛒
+        </div>
+
+    </div>
+
+</header>
+
+<body>
+    <section class="hero">
 
 </section>
+
 
 <section class="produtos">
     
     <div class="card">
-        <img src="Nike zoom fly.avif" alt="Tênis 1">
+        <img src="tenis nike.avif" alt="Tênis 1">
         <h3>TENIS</h3>
         
     </div>
 
     <div class="card">
-        <img src="chuteiras.avif" alt="Tênis 2">
+        <img src="nova niek.avif" alt="Tênis 2">
         <h3>CHUTEIRAS</h3>
     
     </div>
 
     <div class="card">
-        <img src="air force 1.avif" alt="Tênis 3">
+        <img src="Nike zoom fly.avif" alt="Tênis 3">
         <h3>TENIS DE CORRIDA</h3>
     
     </div>
 
 </section>
 
-<div class="card">
-    <div class="card-img">
-        <img src="Nike zoom fly.avif" alt="Tênis">
+<section class="carrossel">
+
+    <button class="seta seta-esquerda" onclick="voltar()">&#10094;</button>
+
+    <div class="viewport">
+        <div class="tenis-container" id="slide">
+
+            <div class="card">
+                <img src="NIKEDUNK1.avif">
+            </div>
+
+            <div class="card">
+                <img src="NIKEDUNKLOW.avif">
+            </div>
+
+            <div class="card">
+                <img src="NIKEDUNKPANDA.avif">
+            </div>
+
+            <div class="card">
+                <img src="NIKEEDITED.avif">
+            </div>
+
+            <div class="card">
+                <img src="PANDAMEGA.avif">
+            </div>
+
+        </div>
     </div>
-    <div class="card-info">
-        <h3>NIKE LUNAR GATO</h3>
-    </div>
-</div>
 
+    <button class="seta seta-direita" onclick="avancar()">&#10095;</button>
 
+</section>
 
+<script src="script.js"></script>
+ 
 
 </body>
 </html>

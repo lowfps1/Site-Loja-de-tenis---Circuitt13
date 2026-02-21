@@ -1,33 +1,10 @@
-section {
-    text-align: center;
-    padding: 80px 20px;
-}
 
-button {
-    background-color: green;
-    color: aliceblue;
-    padding: 10px 14px;
-    cursor: pointer;
-    border: none;
-    font-size: 16px;
-    font-weight: 600;
-}
-
-button:hover {
-    background-color: darkgreen;
-}
-
-section > img {
-    width: 800px;
-    max-width: 100%;
-    margin: 40px auto;
-    display: block;
-    filter: drop-shadow(0px 20px 40px rgba(0,0,0,0.6));
-    transition: transform 0.5s;
-}
-
-section > img:hover {
-    transform: scale(1.05);
+.hero {
+    height: 180vh; /* ocupa 100% da altura da tela */
+    background-image: url("propaganda nike.jpg");
+    background-size: cover;      /* cobre toda a área */
+    background-position: center; /* centraliza */
+    background-repeat: no-repeat;
 }
 
 .produtos {
@@ -39,7 +16,7 @@ section > img:hover {
 }
 
 .card {
-    background-color: #111;
+    background-color: white;
     border-radius: 16px;
     overflow: hidden;
     color: white;
@@ -58,7 +35,7 @@ section > img:hover {
 }
 
 .card-img img {
-    width: 100%;
+    width: 20%;
     transition: transform 0.6s ease;
 }
 
@@ -84,7 +61,7 @@ section > img:hover {
     width: 100%;
     padding: 12px;
     background-color: green;
-    color: aliceblue;
+    color: rgb(1, 2, 2);
     font-weight: 600;
     cursor: pointer;
     border: none;
@@ -109,7 +86,7 @@ section > img:hover {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.15);
+    background: rgba(0, 0, 0, 0.15);
     opacity: 0;
     transition: opacity 0.4s;
 }
@@ -122,29 +99,125 @@ section > img:hover {
     transform: translateY(-12px) rotateX(6deg) rotateY(-6deg);
 }
 
-.fundo-preto {
+.carrossel {
+    position: relative;
+    width: 100%;
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.viewport {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.tenis-container {
     display: flex;
-    flex-wrap: wrap;    
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-    padding: 80px 60px;
-    background-color: #000;
+    gap: 40px;
+    transition: transform 0.5s ease;
+}
+
+.card {
+    min-width: 250px;
+    height: 250px;
+    background: #ffffff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.card img {
+    width: 200px;
 }
 
-body {
-    background-color: hsl(0, 100%, 99%);
+
+.seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: black;
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.seta-esquerda {
+    left: 30px;
+}
+
+.seta-direita {
+    right: 30px;
+}
+
+.seta:hover {
+    background: #ffffff;
+}
+
+header {
+    width: 100%;
     font-family: Arial, sans-serif;
 }
 
-.fundo-preto .card {
-    width: 100px;   /* controla quantos ficam por linha */
+.topbar {
+    background: #f5f5f5;
+    padding: 8px 40px;
+    font-size: 13px;
 }
 
+.top-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
 
+.top-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: white;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    position: relative;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: black;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+.icons {
+    display: flex;
+    gap: 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
